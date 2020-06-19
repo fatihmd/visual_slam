@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/administrator/slam_test/visual_slam/src/sfm.cpp
+iostream
+-
+tools.h
+/home/administrator/slam_test/visual_slam/src/tools.h
+
+/home/administrator/slam_test/visual_slam/src/tools.h
+
