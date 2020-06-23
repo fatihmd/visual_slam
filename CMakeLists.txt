@@ -11,7 +11,13 @@ message(STATUS "-------executable path ${CMAKE_BINARY_DIR}")
 include_directories(${PROJECT_SOURCE_DIR}/src)
 # create library "libtools"
 add_library(tools src/tools.cpp)
+
+find_package( OpenCV REQUIRED )
+message(STATUS "----OPENCV-------- ${OpenCV_INCLUDE_DIRS}")
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+
+
 # add executable main
 add_executable(main src/sfm.cpp)
 # tell the linker to bind these objects together
-target_link_libraries(main tools)
+target_link_libraries(main tools ${OpenCV_LIBS})

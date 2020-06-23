@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/administrator/slam_test/visual_slam/src 
+CXX_INCLUDES = -I/home/administrator/slam_test/visual_slam/src -I/usr/local/include/opencv4 
 
