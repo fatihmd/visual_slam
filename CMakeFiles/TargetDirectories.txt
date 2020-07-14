@@ -1,0 +1,4 @@
+/home/administrator/slam_test/visual_slam/CMakeFiles/rebuild_cache.dir
+/home/administrator/slam_test/visual_slam/CMakeFiles/tools.dir
+/home/administrator/slam_test/visual_slam/CMakeFiles/edit_cache.dir
+/home/administrator/slam_test/visual_slam/CMakeFiles/main.dir
