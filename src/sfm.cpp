@@ -81,6 +81,29 @@ int main(void) {
     cv::imshow("Frame", img);
     cv::waitKey(0);
 
+    /*vector<vector<float>> v(3);
+    cv::convertPointsToHomogeneous(p1, v);
+    cout<<v[0][0]<<v[0][1]<<v[0][2];*/
+
+    cv::Mat F_mat = cv::findFundamentalMat(p1,p2,cv::FM_RANSAC,3,0.99);
+    F_mat.convertTo(F_mat, CV_32FC1);
+    cout<<F_mat<<endl<<p1[0]<<endl<<p2[0]<<endl;
+    //float a[3];
+    vector<cv::Point3f> p1_h(p1.size()), p2_h(p2.size()) ;
+
+    cv::convertPointsToHomogeneous(p1, p1_h);
+    cv::convertPointsToHomogeneous(p2, p2_h);
+    cout<<p2_h[0]<<endl;
+    cout<<cv::Mat(p2_h[0]).t()<<endl;
+    for(int k = 0; k<36;k++){
+    	cv::Mat_ <double> mult = cv::Mat(p1_h[k]).t() * F_mat * cv::Mat(p2_h[k]);
+    	cout<<endl<<mult;
+    }
+
+    /*float res = p1[1]*F_mat;
+    res = res * p2[1];
+    cout << res;*/
+
 
 
 
